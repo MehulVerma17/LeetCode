@@ -1,6 +1,5 @@
 class Solution:
     def asteroidCollision(self, asteroids: List[int]) -> List[int]:
-        #convert=-1
         stack=[]
 
         for a in asteroids:
@@ -16,24 +15,3 @@ class Solution:
             if a:
                 stack.append(a)
         return stack
-
-
-        '''
-        for i in range(len(asteroids)-1,-1,-1):
-            if len(asteroids)>1:
-                a=asteroids.pop()
-                b=asteroids.pop()
-
-                if a<=-1 and b>-1:
-                    a*=convert
-
-                    if a>b:
-                        a*=convert
-                        asteroids.append(a)
-                    elif a<b:
-                        asteroids.append(b)
-                else:
-                    asteroids.append(b)
-                    asteroids.append(a)
-        return asteroids
-        '''
