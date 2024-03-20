@@ -1,6 +1,14 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         
+       
+        nums.sort()
+        n = len(nums)
+        return nums[n//2]
+        
+        
+        
+        '''
         count_dict=Counter(nums)
         key=list(count_dict.keys())
         val=list(count_dict.values())
@@ -8,13 +16,7 @@ class Solution:
 
         maxn=val.index(maxc)
         return key[maxn]
-        
         '''
-        nums.sort()
-        n = len(nums)
-        return nums[n//2]
-        '''
-        
         '''
         maxc=0
         maxn=0
