@@ -1,9 +1,19 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         
+        count_dict=Counter(nums)
+        key=list(count_dict.keys())
+        val=list(count_dict.values())
+        maxc=max(count_dict.values())
+
+        maxn=val.index(maxc)
+        return key[maxn]
+        
+        '''
         nums.sort()
         n = len(nums)
         return nums[n//2]
+        '''
         
         '''
         maxc=0
