@@ -1,5 +1,6 @@
 class Solution:
     def climbStairs(self, n: int) -> int:
+        #can be improved
         if n == 0 or n == 1:
             return 1
         prev, curr = 1, 1
