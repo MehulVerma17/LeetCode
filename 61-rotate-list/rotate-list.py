@@ -22,3 +22,4 @@ class Solution:
         tail2.next=None
         tail.next=head
         return temp
+        #can be faster
