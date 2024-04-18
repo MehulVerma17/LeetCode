@@ -14,8 +14,9 @@ class Solution:
             total = l1_value + l2_value + carry
             current.next = ListNode(total % 10)
             carry = total // 10
-           
+
             l1 = l1.next if l1 else None
             l2 = l2.next if l2 else None
             current = current.next
         return head.next
+        #try another also
