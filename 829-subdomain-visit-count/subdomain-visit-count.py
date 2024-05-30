@@ -1,15 +1,18 @@
 class Solution:
     def subdomainVisits(self, cpdomains: List[str]) -> List[str]:
-        d1=defaultdict(int)
-
+        dic = {}
         for i in cpdomains:
-            count, domain = i.split(" ")
-            count = int(count)
-
-            sub=domain.split(".")
-            for j in range(len(sub)):
-                sub1=".".join(sub[j:])
-                d1[sub1] +=count
-
-        result = [str(count)+" "+sub1 for sub1,count in d1.items()]
-        return result
+            times, domain = i.split()
+            n = domain.count('.')
+            for j in range(n+1):
+                temp = domain.split('.',j)[-1]
+                if temp in dic:
+                    dic[temp] += int(times)
+                else:
+                    dic[temp] = int(times)
+        
+        res = []
+        for i in dic:
+            res.append(f"{dic[i]} {i}")
+        
+        return res
