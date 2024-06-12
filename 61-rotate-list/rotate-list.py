@@ -8,15 +8,15 @@ class Solution:
         if not head or k==0:
             return head
         tail=head
-        c=1
+        count=1
         while tail.next!=None:
-            c+=1
+            count+=1
             tail=tail.next
-        k=k%c
+        k=k%count
         if k==0:
             return head
         tail2=head
-        for i in range(c-k-1):
+        for i in range(count-k-1):
             tail2=tail2.next
         temp=tail2.next
         tail2.next=None
